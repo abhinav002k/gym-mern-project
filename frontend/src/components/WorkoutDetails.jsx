@@ -1,10 +1,12 @@
 // date fns
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+import { useContext} from "react"
+import { WorkoutContext } from "../context/WorkoutContext";
 
 
 
 function WorkoutDetails({workout}){
-
+    const {dispatch}=useContext(WorkoutContext)
     const handleClick=async()=>{
         const res=await fetch(`/api/workouts/${workout._id}`,{
             method:'DELETE'
@@ -13,6 +15,7 @@ function WorkoutDetails({workout}){
 
         if(res.ok){
             console.log(json)
+            dispatch({type: 'DELETE_WORKOUT', payload: json})
         }
     }
 
