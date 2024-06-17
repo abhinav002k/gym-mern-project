@@ -68,6 +68,18 @@ header a {
   color: #333;
 }
 
+.workout-details button {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border: none;
+  border-radius: 50%;
+  color: #333;
+}
+
 
 
 /* new workout form */
@@ -103,3 +115,24 @@ div.error {
 input.error {
   border: 1px solid var(--error);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

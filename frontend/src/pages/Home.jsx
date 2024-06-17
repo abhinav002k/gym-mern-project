@@ -6,6 +6,7 @@ const Home = () => {
 
 
     const{workouts,dispatch}=useContext(WorkoutContext)
+    
     useEffect(() => {
       const fetchWorkouts = async () => {
         try {
